@@ -21,7 +21,7 @@ namespace CodeBase.Infrastructure.States
             _progressReaderServices = progressReaderServices;
         }
 
-        public void GetGameStateMachine(IGameStateMachine gameStateMachine)
+        public void SetGameStateMachine(IGameStateMachine gameStateMachine)
         {
             _gameStateMachine = gameStateMachine;
         }

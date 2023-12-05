@@ -13,7 +13,7 @@ namespace CodeBase.Infrastructure.States
             _staticDataService = staticDataService;
         }
 
-        public void GetGameStateMachine(IGameStateMachine gameStateMachine)
+        public void SetGameStateMachine(IGameStateMachine gameStateMachine)
         {
             _gameStateMachine = gameStateMachine;
         }

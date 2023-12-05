@@ -14,9 +14,9 @@ namespace CodeBase.Infrastructure.States
         {
             _registeredStates = new Dictionary<Type, IExitableState>();
 
-            RegisterState(stateFactory.GetState<BootstrapState>(this));
-            RegisterState(stateFactory.GetState<LoadPlayerProgressState>(this));
-            RegisterState(stateFactory.GetState<LoadLevelState>(this));
+            RegisterState(stateFactory.CreateState<BootstrapState>(this));
+            RegisterState(stateFactory.CreateState<LoadPlayerProgressState>(this));
+            RegisterState(stateFactory.CreateState<LoadLevelState>(this));
         }
 
         protected void RegisterState<TState>(TState state) where TState : IExitableState =>

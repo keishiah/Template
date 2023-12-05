@@ -13,10 +13,10 @@ namespace CodeBase.Infrastructure.Factories
             _container = container;
         }
 
-        public T GetState<T>(IGameStateMachine gameStateMachine) where T : IExitableState
+        public T CreateState<T>(IGameStateMachine gameStateMachine) where T : IExitableState
         {
             var state = _container.Resolve<T>();
-            state.GetGameStateMachine(gameStateMachine);
+            state.SetGameStateMachine(gameStateMachine);
             return state;
         }
 

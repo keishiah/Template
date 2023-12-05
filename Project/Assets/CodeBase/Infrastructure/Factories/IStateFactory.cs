@@ -5,7 +5,7 @@ namespace CodeBase.Infrastructure.Factories
 {
     public interface IStateFactory
     {
-        T GetState<T>(IGameStateMachine gameStateMachine) where T : IExitableState;
+        T CreateState<T>(IGameStateMachine gameStateMachine) where T : IExitableState;
         GameObject CreateGameBootstrapper();
     }
 }
